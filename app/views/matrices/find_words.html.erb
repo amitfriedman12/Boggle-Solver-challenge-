@@ -1,0 +1,15 @@
+<h2><%= link_to "Back To Matrices Page", matrices_path %></h2>
+
+<%= render :partial => "matrix", :locals => {:matrix => @matrix} %>
+<br/>
+
+<% if @matches.any? %>
+	<h1><%= @matches.count %> <%= "Word".pluralize(@matches.count) %> Found:</h1>
+	<%= @matches.each_with_index do |match,index| %>
+		<p><%= index + 1 %>. <%= match %></p>
+	<% end %>
+<% else %>
+	<h1>NO WORD MATCHES FOUND IN MATRIX</h1>
+<% end %>
+
+<h2><%= link_to "Back To Matrices Page", matrices_path %></h2>

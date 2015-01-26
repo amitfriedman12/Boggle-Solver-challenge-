@@ -1,0 +1,20 @@
+<div style="text-align:center;">
+
+  <h1>Listing matrices</h1>
+
+  <% @matrices.each do |matrix| %>
+
+    <%= render :partial => "matrix", :locals => {:matrix => matrix} %>
+    <br/>
+    <%= link_to "Find Words", find_words_matrix_path(matrix) %>
+    <%= link_to 'Show', matrix %>
+    <%= link_to 'Edit', edit_matrix_path(matrix) %>
+    <%= link_to 'Destroy', matrix, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <hr>
+  <% end %>
+
+  <br>
+
+  <%= link_to 'New Matrix', new_matrix_path %>
+
+</div>

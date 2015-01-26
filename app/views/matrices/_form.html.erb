@@ -1,0 +1,33 @@
+<%= form_for(@matrix) do |f| %>
+  <% if @matrix.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@matrix.errors.count, "error") %> prohibited this matrix from being saved:</h2>
+
+      <ul>
+      <% @matrix.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :row1 %><br>
+    <%= f.text_field :row1 %>
+  </div>
+  <div class="field">
+    <%= f.label :row2 %><br>
+    <%= f.text_field :row2 %>
+  </div>
+  <div class="field">
+    <%= f.label :row3 %><br>
+    <%= f.text_field :row3 %>
+  </div>
+  <div class="field">
+    <%= f.label :row4 %><br>
+    <%= f.text_field :row4 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

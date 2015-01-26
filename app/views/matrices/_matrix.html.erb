@@ -1,0 +1,9 @@
+<table class="matrix">
+      <% for i in 1..4 %>
+        <tr>
+          <% for j in 0..3 %>
+            <td><%= matrix.attributes['row'+i.to_s][j] %></td>
+          <% end %>
+        </tr>
+      <% end %>
+</table>      
