@@ -8,7 +8,9 @@
 
 * ruby 2.1.0p0, rails 4.0.2
 
-* Using the basic sqlite3 DB
+* Using the basic sqlite3, to set up the DB run:
+
+$ rake db:migrate
 
 * To run the test suite, run:
 
