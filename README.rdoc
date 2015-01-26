@@ -4,13 +4,14 @@
 * https://gist.github.com/scottburton11/a2d8afcee57d13232ed4
 
 * My assumption is that words can not wrap around the edges.
-* The user can select whether he allows words of length 2.
+* The users can select whether they allow words of length 2.
 
 * ruby 2.1.0p0, rails 4.0.2
 
 * Using the basic sqlite3 DB
 
 * To run the test suite, run:
+
 $ rspec/models/matrix_spec.rb
-and:
+
 $ rspec/boggle_spec.rb
