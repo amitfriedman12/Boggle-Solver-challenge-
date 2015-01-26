@@ -24,9 +24,9 @@ describe "Matrix Array" do
 		it "includes af, afk, afkp" do
 			strng = matrix[row_index][col_index]
 			matrix.direction(sbstrngs, row_index, col_index, strng, 1, 1)
-			expect(sbstrngs).to include("af")
-			expect(sbstrngs).to include("afk")
-			expect(sbstrngs).to include("afkp")			
+			expect(sbstrngs).to include("AF")
+			expect(sbstrngs).to include("AFK")
+			expect(sbstrngs).to include("AFKP")			
 		end
 	end
 
@@ -41,10 +41,10 @@ describe "Matrix Array" do
 		end
 
 		it "finds all possible substrings" do
-			expect(simple_matrix.all_matrix_substrings).to include("aa")
-			expect(simple_matrix.all_matrix_substrings).to include("aaa")
-			expect(simple_matrix.all_matrix_substrings).to include("aaaa")			
-			expect(matrix.all_matrix_substrings).to include("hkn")
+			expect(simple_matrix.all_matrix_substrings).to include("AA")
+			expect(simple_matrix.all_matrix_substrings).to include("AAA")
+			expect(simple_matrix.all_matrix_substrings).to include("AAAA")			
+			expect(matrix.all_matrix_substrings).to include("HKN")
 		end
 	end
 
