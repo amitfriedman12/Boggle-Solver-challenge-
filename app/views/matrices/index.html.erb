@@ -6,10 +6,11 @@
 
     <%= render :partial => "matrix", :locals => {:matrix => matrix} %>
     <br/>
-    <%= link_to "Find Words", find_words_matrix_path(matrix) %>
     <%= link_to 'Show', matrix %>
     <%= link_to 'Edit', edit_matrix_path(matrix) %>
     <%= link_to 'Destroy', matrix, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <br/><br/>
+      <%= render :partial => "find", :locals => {:matrix => matrix} %>
     <hr>
   <% end %>
 

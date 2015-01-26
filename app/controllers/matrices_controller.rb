@@ -2,7 +2,8 @@ class MatricesController < ApplicationController
   before_action :set_matrix, only: [:show, :edit, :update, :destroy, :find_words]
 
   def find_words
-    @matches = @matrix.to_array.find_dictionary_matches(grab_english_words_hash)
+    two_letter = (params[:two_letter] == 'true')
+    @matches = @matrix.to_array.find_dictionary_matches(grab_english_words_hash, two_letter)
   end
 
   # GET /matrices
@@ -76,13 +77,13 @@ class MatricesController < ApplicationController
       params.require(:matrix).permit(:row1, :row2, :row3, :row4)
     end
 
-  def grab_english_words_hash
-    dictionary = Hash.new 
-    File.open("dictionary.txt") do |file|
-      file.each do |line|
-        dictionary[line.strip.upcase] = true
+    def grab_english_words_hash
+      dictionary = Hash.new 
+      File.open("dictionary.txt") do |file|
+        file.each do |line|
+          dictionary[line.strip.upcase] = true
+        end
       end
-    end
-    dictionary
-  end    
+      dictionary
+    end    
 end

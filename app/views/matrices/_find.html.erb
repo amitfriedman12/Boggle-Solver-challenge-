@@ -1,0 +1,9 @@
+<div id="find">
+	<fieldset>
+ 	<%= form_tag :url => find_words_matrix_path(matrix) do %>
+    	2 letter words allowed?
+    	<%= select_tag("two_letter", options_for_select([['Yes',true],['No',false]])) %><br/>
+    	<button type="submit">Find English Words</button>
+  <% end %>
+</fieldset>
+</div>

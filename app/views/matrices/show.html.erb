@@ -4,7 +4,9 @@
 	<%= render :partial => "matrix", :locals => {:matrix => @matrix} %>
 
 	<br/><br/>
-	<%= link_to "Find Words", find_words_matrix_path(@matrix) %>
 	<%= link_to 'Edit', edit_matrix_path(@matrix) %> |
 	<%= link_to 'Back', matrices_path %>
+	<br/><br/>
+	<%= render :partial => "find", :locals => {:matrix => @matrix} %>
+
 </div>
