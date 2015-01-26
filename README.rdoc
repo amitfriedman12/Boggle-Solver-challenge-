@@ -1,28 +1,16 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* My solution to the 4x4 Boggle challenge described below:
+* https://gist.github.com/scottburton11/a2d8afcee57d13232ed4
 
-Things you may want to cover:
+* My assumption is that words can not wrap around the edges.
+* The user can select whether he allows words of length 2.
 
-* Ruby version
+* ruby 2.1.0p0, rails 4.0.2
 
-* System dependencies
+* Using the basic sqlite3 DB
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* To run the test suite, run:
+$ rspec/models/matrix_spec.rb
+and:
+$ rspec/boggle_spec.rb
